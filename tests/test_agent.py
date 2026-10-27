@@ -45,6 +45,10 @@ class AgentLoopTests(unittest.TestCase):
         self.assertIn("Classify by the operational topic", SYSTEM_PROMPT)
         self.assertIn("within-24-hour booking changes", SYSTEM_PROMPT)
         self.assertIn("Never invent or infer a booking ID", SYSTEM_PROMPT)
+        self.assertIn("create or reserve a transportation booking", SYSTEM_PROMPT)
+        self.assertIn("unsupported-domain reservation", SYSTEM_PROMPT)
+        self.assertIn("Return/refund policy", SYSTEM_PROMPT)
+        self.assertIn("rejected cards", SYSTEM_PROMPT)
 
     def test_end_to_end_tool_loop(self):
         result = SupportAgent(client=FakeClient(), model="test-model").handle_ticket(

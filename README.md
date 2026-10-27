@@ -190,6 +190,15 @@ python evaluate_external.py --output results/external_holdout_v1.json
 
 因为这组结果已经被查看，它现在是 external diagnostic baseline，不再是未来 prompt 修改的盲测集。下一次泛化验证需要使用不同 ABCD records 和尚未使用的第二个 MultiWOZ test 文件。
 
+根据 external v1 的错误分析，prompt 已升级为 `v3-external-boundaries`：新建火车、出租车、shuttle 或 coach 预订属于 `booking issue`；酒店、餐厅和景点等不支持领域仍属于 `general information`；退货/退款政策、发起退款、信用卡被拒和支付失败统一属于 `refund/payment`。在相同60条上重跑只用于 before/after development comparison，不应描述为新的独立 holdout：
+
+```bash
+python evaluate_external.py \
+  --output results/external_development_v3.json
+```
+
+不要覆盖 `results/external_holdout_v1.json`。v3 的最终泛化结论仍需第二组未使用的外部数据验证。
+
 ## 限制
 
 - JSON 文件写入没有数据库锁，不适合并发生产流量。

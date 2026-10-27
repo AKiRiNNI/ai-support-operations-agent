@@ -28,6 +28,7 @@ The project demonstrates four distinct ideas:
 - Tool F1 decreased from 92.9% to 87.9%, revealing a policy-lookup regression and motivating a separate holdout evaluation
 - Added a reproducible 60-case external category benchmark from official ABCD and MultiWOZ test splits; the first run completed 60/60 cases with 0% runtime failures and established a 61.7% cross-domain baseline
 - External error analysis separated 18 new-reservation ontology mismatches and five refund/payment boundary errors from runtime failures, defining the next controlled prompt iteration
+- Prompt v3 encodes the external failure boundaries while keeping unsupported hotel, restaurant, and attraction reservations outside the transportation booking category
 
 Do not present the 60-case results as production performance. The set is synthetic and functions as a development benchmark after prompt refinement.
 
