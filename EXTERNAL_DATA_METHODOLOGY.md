@@ -77,3 +77,9 @@ python evaluate_external.py --output results/external_holdout_v1.json
 - Dataset authors created the conversations under research protocols; they are not private company logs.
 - The mapping was written by one project author and has not undergone inter-annotator review.
 - This dataset is suitable for external robustness evaluation, not for claiming production accuracy.
+
+## v1 experiment result
+
+The first complete run finished all 60 cases with 0% runtime failures and 61.7% category accuracy. Accuracy was 87.5% on ABCD and 10.0% on MultiWOZ. The dominant error was a project-ontology ambiguity: 18 of 20 requests to create a new reservation were classified as `general information` because the v2 prompt defines existing booking changes and problems but not new bookings.
+
+The raw report is `results/external_holdout_v1.json`; the confusion and root-cause analysis is in [`results/EXTERNAL_HOLDOUT_ANALYSIS.md`](results/EXTERNAL_HOLDOUT_ANALYSIS.md). This set is now a diagnostic development artifact rather than a blind holdout for future prompt revisions.

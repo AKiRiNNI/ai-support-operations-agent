@@ -30,4 +30,6 @@ The v2 prompt was changed only after this baseline was saved. Its result is stor
 
 See [`BENCHMARK_METHODOLOGY.md`](../BENCHMARK_METHODOLOGY.md) for data provenance, labeling rules, metric definitions, and validity limitations.
 
-The separate public-data holdout has not been run yet. When it is run, save the first complete report as `external_holdout_v1.json`. Its only scored metric is category accuracy; tool and escalation behavior are audit-only because the upstream datasets do not contain this project's operational ground truth. See [`EXTERNAL_DATA_METHODOLOGY.md`](../EXTERNAL_DATA_METHODOLOGY.md).
+The public-data external baseline is stored in `external_holdout_v1.json`. It completed 60/60 cases with 0% runtime failures and 61.7% category accuracy: 87.5% on ABCD and 10.0% on MultiWOZ. Its only scored metric is category accuracy; tool and escalation behavior are audit-only because the upstream datasets do not contain this project's operational ground truth.
+
+The low MultiWOZ score exposed an ontology boundary: the v2 prompt covers existing booking problems but not requests to create a new reservation. See [`EXTERNAL_HOLDOUT_ANALYSIS.md`](EXTERNAL_HOLDOUT_ANALYSIS.md) and [`EXTERNAL_DATA_METHODOLOGY.md`](../EXTERNAL_DATA_METHODOLOGY.md).

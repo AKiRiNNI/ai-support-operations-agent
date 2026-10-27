@@ -186,12 +186,16 @@ python evaluate_external.py --output results/external_holdout_v1.json
 
 外部数据只评分 category accuracy。工具和升级行为会记录下来用于审计，但不会伪装成有上游 ground truth 的准确率。这个数据集没有用于 fine-tuning，也不应该在查看结果后继续用于 prompt 调优。
 
+首次完整 external baseline 已保存到 `results/external_holdout_v1.json`：60/60 成功完成，runtime failure 为 0%，整体 category accuracy 为 61.7%。分数据源结果为 ABCD 87.5%、MultiWOZ 10.0%。错误分析发现，新建预订和既有 booking issue 的边界不明确，导致 18/20 个 MultiWOZ 请求落入 `general information`；另外 5 个退款、退货政策或信用卡失败案例也落入兜底类别。详见 [`results/EXTERNAL_HOLDOUT_ANALYSIS.md`](results/EXTERNAL_HOLDOUT_ANALYSIS.md)。
+
+因为这组结果已经被查看，它现在是 external diagnostic baseline，不再是未来 prompt 修改的盲测集。下一次泛化验证需要使用不同 ABCD records 和尚未使用的第二个 MultiWOZ test 文件。
+
 ## 限制
 
 - JSON 文件写入没有数据库锁，不适合并发生产流量。
 - 知识库搜索仅使用关键词重叠，不是语义检索。
 - 最终 JSON 通过应用层校验；当前未使用 Responses API 的结构化输出 schema。
-- 外部 holdout 是研究数据而非生产客服日志，目前只覆盖五个类别中的三个。
+- 外部 benchmark 是研究数据而非生产客服日志，目前只覆盖五个类别中的三个，并存在跨领域 ontology mapping 限制。
 - 尚未覆盖真实生产语言分布、提示注入、多语言和复杂退款政策。
 - Agent 能创建升级，但不能修改预订或发起退款。
 

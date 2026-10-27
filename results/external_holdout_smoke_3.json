@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "created_at": "2026-10-27T20:55:30.084149+00:00",
+    "model": "gpt-5.4-mini",
+    "prompt_version": "v2-decision-boundaries",
+    "dataset": "/Users/akirin/Documents/Codex/2026-09-22/i-want-to-build-a-portfolio/outputs/ai-support-operations-agent/tests/external_holdout_cases.json",
+    "scored_dimensions": [
+      "category"
+    ],
+    "note": "Tools and escalations are recorded for audit but not scored."
+  },
+  "summary": {
+    "cases": 3,
+    "completed_cases": 3,
+    "runtime_failure_rate": 0.0,
+    "category_accuracy": 1.0,
+    "by_category": {
+      "general information": {
+        "cases": 2,
+        "category_accuracy": 1.0
+      },
+      "refund/payment": {
+        "cases": 1,
+        "category_accuracy": 1.0
+      }
+    },
+    "by_source": {
+      "ABCD v1.1": {
+        "cases": 3,
+        "category_accuracy": 1.0
+      }
+    },
+    "unscored_decision_audit": {
+      "tool_call_counts": {
+        "search_knowledge_base": 2
+      },
+      "escalations_created": 0
+    }
+  },
+  "details": [
+    {
+      "ticket_id": "EXT-ABCD-10014",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "10014",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1045",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1045",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1075",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1075",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    }
+  ]
+}
