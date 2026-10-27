@@ -13,8 +13,9 @@
 - 将升级记录持久化到本地 JSON
 - 记录每张工单实际调用的工具
 - 使用 60 条平衡合成工单评估类别、升级、工具选择和端到端可靠性
+- 使用 60 条 ABCD/MultiWOZ 公开数据 holdout 测试跨数据源分类泛化
 
-数据来源、标签规则和评估限制详见 [`BENCHMARK_METHODOLOGY.md`](BENCHMARK_METHODOLOGY.md)。
+数据来源、标签规则和评估限制详见 [`BENCHMARK_METHODOLOGY.md`](BENCHMARK_METHODOLOGY.md) 和 [`EXTERNAL_DATA_METHODOLOGY.md`](EXTERNAL_DATA_METHODOLOGY.md)。
 
 ## 一分钟理解这个项目
 
@@ -76,11 +77,17 @@ ai-support-operations-agent/
 ├── agent.py
 ├── tools.py
 ├── evaluate.py
+├── evaluate_external.py
+├── scripts/
+│   └── build_external_holdout.py
 ├── data/
 │   ├── bookings.json
 │   ├── knowledge_base.json
-│   └── escalations.json
+│   ├── escalations.json
+│   └── external/licenses/
 ├── tests/
+│   ├── benchmark_cases.json
+│   ├── external_holdout_cases.json
 │   ├── test_agent.py
 │   ├── test_tools.py
 │   └── test_cases.json
@@ -164,12 +171,28 @@ v2 结果：类别准确率 93.3%、升级准确率 98.3%、工具完全匹配�
 
 工具调用具有非确定性，因此工具指标是诊断信号，不应被视为唯一正确路径。评估中的升级案例使用临时文件，不会修改演示数据。
 
+### 公开数据 external holdout
+
+为了避免只在自己写的测试题上调 prompt，项目还包含 60 条来自 ABCD v1.1 和 MultiWOZ 2.2 官方 test split 的外部案例：`booking issue`、`refund/payment`、`general information` 各 20 条。生成过程固定上游 commit、验证 SHA-256，并保留每条记录的 source ID、原标签、许可证和转换说明。
+
+```bash
+# 首次运行需要网络；原始文件只缓存在 .cache/，不会提交 GitHub
+python scripts/build_external_holdout.py
+
+# 先跑 3 条确认 API 配置，再跑完整 60 条
+python evaluate_external.py --limit 3 --output results/external_holdout_smoke_3.json
+python evaluate_external.py --output results/external_holdout_v1.json
+```
+
+外部数据只评分 category accuracy。工具和升级行为会记录下来用于审计，但不会伪装成有上游 ground truth 的准确率。这个数据集没有用于 fine-tuning，也不应该在查看结果后继续用于 prompt 调优。
+
 ## 限制
 
 - JSON 文件写入没有数据库锁，不适合并发生产流量。
 - 知识库搜索仅使用关键词重叠，不是语义检索。
 - 最终 JSON 通过应用层校验；当前未使用 Responses API 的结构化输出 schema。
-- 评估集是合成数据，尚未覆盖真实客户语言分布、提示注入、多语言和复杂退款政策。
+- 外部 holdout 是研究数据而非生产客服日志，目前只覆盖五个类别中的三个。
+- 尚未覆盖真实生产语言分布、提示注入、多语言和复杂退款政策。
 - Agent 能创建升级，但不能修改预订或发起退款。
 
 ## 后续改进

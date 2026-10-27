@@ -1,0 +1,1042 @@
+[
+  {
+    "ticket_id": "EXT-ABCD-10014",
+    "message": "i would like to know how long a premium membership lasts",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "10014",
+      "source_label": "storewide_query/membership_4",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1045",
+    "message": "i'd like to change my primary payment method for my account",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1045",
+      "source_label": "manage_account/manage_payment_method",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1075",
+    "message": "i am looking at making some purchases but before i do i was hoping you could let me know more about your premium membership.",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1075",
+      "source_label": "storewide_query/membership_3",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1087",
+    "message": "i'd like to place an order but my credit card keeps being rejected.",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1087",
+      "source_label": "troubleshoot_site/credit_card",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1208",
+    "message": "hi i'd like to know when the local store in <city>, mi opens",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1208",
+      "source_label": "storewide_query/timing_2",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1529",
+    "message": "hello, i've changed my mind about an order and i'd like a refund.",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1529",
+      "source_label": "product_defect/refund_initiate",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1564",
+    "message": "hi, i am not happy with my bill. there was a charge on there that was doubled. i'm not a twin!",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1564",
+      "source_label": "subscription_inquiry/manage_dispute_bill",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1669",
+    "message": "hi! i was charged twice for something i bought so i want to dispute my bill.",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1669",
+      "source_label": "subscription_inquiry/manage_dispute_bill",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1778",
+    "message": "hi i wanted to see if my purchases qualify for free shipping?",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1778",
+      "source_label": "storewide_query/pricing_4",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1896",
+    "message": "hello i would like to know the price of overnight shipping for this item",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1896",
+      "source_label": "storewide_query/pricing_3",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-1903",
+    "message": "hi, can you please tell me the benefits of the premium membership?",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "1903",
+      "source_label": "storewide_query/membership_3",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2003",
+    "message": "hello, i would like to get the price of stitching my name on one of my items",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2003",
+      "source_label": "storewide_query/pricing_2",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2070",
+    "message": "hi when can the promo code be used?",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2070",
+      "source_label": "storewide_query/timing_4",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2103",
+    "message": "hi! i'm shopping for a birthday gift for my niece and she's super picky lol. i was wondering what your return policy is",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2103",
+      "source_label": "storewide_query/policy_2",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-215",
+    "message": "hi, i'm trying to buy a shirt but my credit card is getting rejected",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "215",
+      "source_label": "troubleshoot_site/credit_card",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2237",
+    "message": "hey i'm curious what makes a shopping cart eligible for free shipping",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2237",
+      "source_label": "storewide_query/pricing_4",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2244",
+    "message": "hello i am getting ready to place an order and i want to know the price of gift wrapping it",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2244",
+      "source_label": "storewide_query/pricing_1",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2280",
+    "message": "do you offer overnight shipping?",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2280",
+      "source_label": "storewide_query/pricing_3",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2509",
+    "message": "hi, my name is <customer_name>, i want to ask about a pending refund that i have with you",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2509",
+      "source_label": "product_defect/refund_update",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2556",
+    "message": "hey i was just wondering... i wanted to make more purchases and since i'm planning on making more frequent purchases, how do i sign up for a premium membership?",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2556",
+      "source_label": "storewide_query/membership_2",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-2772",
+    "message": "my primary payment method isnt showing up correctly",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "2772",
+      "source_label": "manage_account/manage_payment_method",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-3013",
+    "message": "hi, i need to get a refund for this shirt. i don't want it anymore",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "3013",
+      "source_label": "product_defect/refund_initiate",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-3234",
+    "message": "hello. i completed a return with you guys and have not seen my charge reverse yet",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "3234",
+      "source_label": "purchase_dispute/mistimed_billing_already_returned",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-3332",
+    "message": "hello, i want to know the status of my refund.",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "3332",
+      "source_label": "product_defect/refund_status",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-3406",
+    "message": "i was looking at an item and was wondering what the price of stitching my name on it",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "3406",
+      "source_label": "storewide_query/pricing_2",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-3499",
+    "message": "i have a refund for some clothes but i also want to exchange the jacket in the list",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "3499",
+      "source_label": "product_defect/refund_update",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-351",
+    "message": "when is the annual sale?",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "351",
+      "source_label": "storewide_query/timing_3",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-3644",
+    "message": "hi. my name is <customer_name>. i am just writing to find out with your return policy consists of.",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "3644",
+      "source_label": "storewide_query/policy_1",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-3685",
+    "message": "hi. my name is <customer_name>. i wanted to inquire what each of the membership levels entails?",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "3685",
+      "source_label": "storewide_query/membership_1",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-3743",
+    "message": "i have been charged for an order that i never made",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "3743",
+      "source_label": "purchase_dispute/mistimed_billing_never_bought",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-4061",
+    "message": "i was charged for an order and i did not buy anything",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "4061",
+      "source_label": "purchase_dispute/mistimed_billing_never_bought",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-4160",
+    "message": "can you explain the membership levels. i'm thinking of buying something.",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "4160",
+      "source_label": "storewide_query/membership_1",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-431",
+    "message": "hi, i returned an item and the charge on my statement hasn't been reversed even though the return shows as completed",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "431",
+      "source_label": "purchase_dispute/mistimed_billing_already_returned",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-4613",
+    "message": "i want to check on the price of gift to wrapp my jacket",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "4613",
+      "source_label": "storewide_query/pricing_1",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-465",
+    "message": "yes, i am a bit of a shopaholic and really am anxious to know when the new fall line will be open to shop?",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "465",
+      "source_label": "storewide_query/timing_1",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-5180",
+    "message": "interested in what it takes to get the premium membership",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "5180",
+      "source_label": "storewide_query/membership_2",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-5252",
+    "message": "hi. my name is <customer_name>. i was wondering if you could tell me about the refund policy?",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "5252",
+      "source_label": "storewide_query/policy_2",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-5410",
+    "message": "hi! i am expecting a refund and wanted to double check the status of the refund please",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "5410",
+      "source_label": "product_defect/refund_status",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-671",
+    "message": "hello, i have a question about the upcoming fall collection.",
+    "expected_category": "general information",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "671",
+      "source_label": "storewide_query/timing_1",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-ABCD-987",
+    "message": "i wanna know the return policy",
+    "expected_category": "refund/payment",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "ABCD v1.1",
+      "split": "test",
+      "record_id": "987",
+      "source_label": "storewide_query/policy_1",
+      "upstream_commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+      "license": "MIT",
+      "transformation": "First non-greeting delexed customer turn; profile values replaced."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL0225",
+    "message": "I'm looking to book a ticket for a train that leaves stevenage after 09:45.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL0225.json",
+      "source_turn_id": "0",
+      "source_label": "book_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL0233",
+    "message": "I am interested in booking a train to cambridge for next tuesday.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL0233.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL0432",
+    "message": "I would like to book a train.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL0432.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL0457",
+    "message": "I am looking to plan a trip I am looking to book some tickets at a place called Abbey pool and astroturf pitch.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL0457.json",
+      "source_turn_id": "0",
+      "source_label": "find_attraction",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL0469",
+    "message": "Hello, I am looking to book a train that will be departing Cambridge after 13:15.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL0469.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL0484",
+    "message": "I need train reservations from norwich to cambridge",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL0484.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL0677",
+    "message": "I need to book a train ticket going to Cambridge any day but has to arrive by 18:30, can you assist me with that?",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL0677.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL1642",
+    "message": "Hello, I'm trying to find a train that goes from Cambridge to London Kings Cross. Can you help me book a ticket?",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL1642.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL2130",
+    "message": "I'm looking to book lodging for a place to stay, it should be a guesthouse and have free wifi.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL2130.json",
+      "source_turn_id": "0",
+      "source_label": "find_hotel",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-MUL2368",
+    "message": "Hello! I am looking to book reservations at Sala Thong.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "MUL2368.json",
+      "source_turn_id": "0",
+      "source_label": "find_restaurant",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-PMUL1537",
+    "message": "I would like to book a room in a hotel, please.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "PMUL1537.json",
+      "source_turn_id": "0",
+      "source_label": "find_hotel",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-PMUL1623",
+    "message": "Would you help me book a train today?",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "PMUL1623.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-PMUL1755",
+    "message": "I'm looking for a train ticket, do you book those?",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "PMUL1755.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-SNG0004",
+    "message": "I would like to book a taxi to go to little saint mary's church after 11:00.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "SNG0004.json",
+      "source_turn_id": "0",
+      "source_label": "find_taxi",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-SNG0008",
+    "message": "Hi, I'd like to book a taxi from A and B Guest House to Saint Catherine's College.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "SNG0008.json",
+      "source_turn_id": "0",
+      "source_label": "find_taxi",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-SNG0085",
+    "message": "I need to book a taxi to arrive by 09:00.",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "SNG0085.json",
+      "source_turn_id": "0",
+      "source_label": "find_taxi",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-SNG0098",
+    "message": "I would like to book a taxi to Royal Standard, leaving after 03:30",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "SNG0098.json",
+      "source_turn_id": "0",
+      "source_label": "find_taxi",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-SNG01359",
+    "message": "Please help me make a taxi reservation",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "SNG01359.json",
+      "source_turn_id": "0",
+      "source_label": "find_taxi",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-SNG01542",
+    "message": "Please reserve for me a taxi that will pick me up at cambridge arts theatre after 09:30",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "SNG01542.json",
+      "source_turn_id": "0",
+      "source_label": "find_taxi",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  },
+  {
+    "ticket_id": "EXT-MWOZ-SNG01733",
+    "message": "I need to make a train reservation for Friday and I need it to arrive by 19:00",
+    "expected_category": "booking issue",
+    "evaluation_scope": [
+      "category"
+    ],
+    "source": {
+      "dataset": "MultiWOZ 2.2",
+      "split": "test",
+      "record_id": "SNG01733.json",
+      "source_turn_id": "0",
+      "source_label": "find_train",
+      "upstream_commit": "fe0c8e65cfcd8462bd33c86e35f21addc84ca82b",
+      "license": "MIT",
+      "transformation": "Whitespace normalized; wording unchanged."
+    }
+  }
+]

@@ -29,3 +29,5 @@ The v2 prompt was changed only after this baseline was saved. Its result is stor
 | End-to-end pass rate | 65.0% | 75.0% |
 
 See [`BENCHMARK_METHODOLOGY.md`](../BENCHMARK_METHODOLOGY.md) for data provenance, labeling rules, metric definitions, and validity limitations.
+
+The separate public-data holdout has not been run yet. When it is run, save the first complete report as `external_holdout_v1.json`. Its only scored metric is category accuracy; tool and escalation behavior are audit-only because the upstream datasets do not contain this project's operational ground truth. See [`EXTERNAL_DATA_METHODOLOGY.md`](../EXTERNAL_DATA_METHODOLOGY.md).

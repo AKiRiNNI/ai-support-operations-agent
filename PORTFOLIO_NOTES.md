@@ -26,6 +26,7 @@ The project demonstrates four distinct ideas:
 - A v2 decision-boundary prompt is ready for a controlled before/after rerun on the same 60 cases
 - v2 improved category accuracy from 90.0% to 93.3%, escalation accuracy from 93.3% to 98.3%, exact tool selection from 75.0% to 81.7%, and end-to-end pass rate from 65.0% to 75.0%
 - Tool F1 decreased from 92.9% to 87.9%, revealing a policy-lookup regression and motivating a separate holdout evaluation
+- Added a reproducible 60-case external category holdout from the official ABCD and MultiWOZ test splits; results are intentionally not claimed until the paid API run is completed
 
 Do not present the 60-case results as production performance. The set is synthetic and functions as a development benchmark after prompt refinement.
 
@@ -34,6 +35,7 @@ Do not present the 60-case results as production performance. The set is synthet
 - **AI Workflow Automation:** Built a Python support-operations agent using OpenAI native function calling to classify ticket category and urgency, dynamically route requests across knowledge retrieval, booking lookup, and escalation tools, and generate structured customer responses.
 - **Testing & Validation:** Evaluated 60 labeled synthetic support cases across five operational categories, achieving 90% category accuracy, 93% escalation accuracy, and 0% runtime failures; analyzed six classification errors, four escalation errors, and fifteen tool-routing mismatches to refine decision boundaries.
 - **Iterative Improvement:** Refined decision boundaries from benchmark failure analysis, improving category accuracy from 90% to 93%, escalation accuracy from 93% to 98%, exact tool selection from 75% to 82%, and end-to-end pass rate from 65% to 75% on the development benchmark.
+- **Evaluation Design:** Built a provenance-tracked external holdout from 60 public ABCD and MultiWOZ examples, preserving source IDs, licenses, and deterministic transformations to test classification beyond prompt-development cases.
 
 ## Resume bullet after running the 60-case benchmark
 

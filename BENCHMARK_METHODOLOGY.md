@@ -106,3 +106,7 @@ The v2 prompt clarified operational category boundaries, mandatory urgent-bookin
 - Because baseline errors were used to write the v2 prompt, this 60-case set now functions as a development benchmark. v2 results measure iteration on known cases, not independent generalization.
 
 The next rigorous step is a separately authored holdout set that is not inspected or used during prompt refinement, ideally followed by repeated runs and human review.
+
+## External holdout
+
+That next step is implemented as `tests/external_holdout_cases.json`: 60 category-only cases derived reproducibly from the official ABCD v1.1 and MultiWOZ 2.2 test splits. It remains separate from this synthetic development benchmark and is not used for prompt refinement. See [`EXTERNAL_DATA_METHODOLOGY.md`](EXTERNAL_DATA_METHODOLOGY.md) for provenance, license notices, mapping rules, and limitations.
