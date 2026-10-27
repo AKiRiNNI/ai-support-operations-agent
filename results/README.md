@@ -18,4 +18,14 @@ Observed failure patterns:
 - Extra knowledge-base searches in urgent accessibility and disruption cases.
 - Missing policy searches in a small number of booking/accessibility requests.
 
-The v2 prompt was changed only after this baseline was saved. Write the next comparable run to `benchmark_60_v2.json`; do not overwrite the baseline.
+The v2 prompt was changed only after this baseline was saved. Its result is stored in `benchmark_60_v2.json`.
+
+| Metric | Baseline | v2 |
+|---|---:|---:|
+| Category accuracy | 90.0% | 93.3% |
+| Escalation accuracy | 93.3% | 98.3% |
+| Tool exact match | 75.0% | 81.7% |
+| Tool F1 | 92.9% | 87.9% |
+| End-to-end pass rate | 65.0% | 75.0% |
+
+See [`BENCHMARK_METHODOLOGY.md`](../BENCHMARK_METHODOLOGY.md) for data provenance, labeling rules, metric definitions, and validity limitations.
