@@ -28,7 +28,7 @@
 ## 一个月后如何重新启动
 
 ```bash
-cd /Users/akirin/Documents/Codex/2026-09-22/i-want-to-build-a-portfolio/outputs/ai-support-operations-agent
+cd ai-support-operations-agent
 source .venv/bin/activate
 export OPENAI_API_KEY="your_api_key_here"
 python app.py --ticket-id T-200 --message "My coach for BK-1003 was cancelled and I am stranded."
@@ -150,7 +150,7 @@ python evaluate.py \
 - `end_to_end_pass_rate`：分类、升级和工具完全匹配同时正确的比例
 - `by_category`：五类工单的分组结果
 
-工具调用具有非确定性，因此工具指标是诊断信号，不应被视为唯一正确路径。评估中的升级案例会向 `data/escalations.json` 写入记录。
+工具调用具有非确定性，因此工具指标是诊断信号，不应被视为唯一正确路径。评估中的升级案例使用临时文件，不会修改演示数据。
 
 ## 限制
 
