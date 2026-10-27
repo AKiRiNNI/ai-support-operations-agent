@@ -1,0 +1,15 @@
+$ python app.py \
+  --ticket-id T-100 \
+  --message "My coach for BK-1003 was cancelled and I am stranded."
+
+{
+  "ticket_id": "T-100",
+  "category": "service disruption",
+  "urgency": "high",
+  "tools_used": [
+    "lookup_booking",
+    "create_escalation"
+  ],
+  "escalation_status": "created",
+  "final_response": "I’m sorry this happened. I checked booking BK-1003 and confirmed the coach is marked as disrupted. I’ve escalated this for urgent human review so the team can help with rebooking or next steps as quickly as possible."
+}

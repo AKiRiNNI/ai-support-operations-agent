@@ -1,0 +1,33 @@
+[
+  {
+    "article_id": "KB-001",
+    "title": "Accessibility assistance",
+    "keywords": ["accessibility", "wheelchair", "mobility", "assistance", "service animal"],
+    "content": "Accessibility requests are free. Confirm the booking details and required accommodation. Escalate urgent unmet needs for travel within 48 hours."
+  },
+  {
+    "article_id": "KB-002",
+    "title": "Refund timelines",
+    "keywords": ["refund", "payment", "charged", "money", "card"],
+    "content": "Approved card refunds normally appear within 5-10 business days. Duplicate charges and refunds overdue by more than 10 business days require escalation."
+  },
+  {
+    "article_id": "KB-003",
+    "title": "Booking changes",
+    "keywords": ["booking", "change", "cancel", "date", "name"],
+    "content": "Most bookings can be changed up to 24 hours before departure. Same-day changes require an operations specialist."
+  },
+  {
+    "article_id": "KB-004",
+    "title": "Service disruptions",
+    "keywords": ["delay", "cancelled", "disruption", "stranded", "missed"],
+    "content": "For active disruptions, verify the booking and escalate high-impact cases such as stranded passengers or missed critical connections."
+  },
+  {
+    "article_id": "KB-005",
+    "title": "Baggage information",
+    "keywords": ["bag", "baggage", "luggage", "suitcase"],
+    "content": "Each passenger may bring one suitcase and one small personal item. Oversized items must be arranged in advance."
+  }
+]
+

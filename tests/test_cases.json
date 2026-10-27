@@ -1,0 +1,18 @@
+[
+  {"ticket_id":"T-001","message":"I use a wheelchair. Please confirm my accessible vehicle for booking BK-1001 on October 4.","expected_category":"accessibility assistance","expected_escalation":false,"expected_tools":["lookup_booking"]},
+  {"ticket_id":"T-002","message":"My trip is tomorrow, booking BK-1003, and I am stranded after the coach was cancelled.","expected_category":"service disruption","expected_escalation":true,"expected_tools":["lookup_booking","create_escalation"]},
+  {"ticket_id":"T-003","message":"How much luggage can I bring?","expected_category":"general information","expected_escalation":false,"expected_tools":["search_knowledge_base"]},
+  {"ticket_id":"T-004","message":"Where is my refund for cancelled booking BK-1002? It was approved 14 business days ago.","expected_category":"refund/payment","expected_escalation":true,"expected_tools":["lookup_booking","search_knowledge_base","create_escalation"]},
+  {"ticket_id":"T-005","message":"I need to change the date on booking BK-1001 next month.","expected_category":"booking issue","expected_escalation":false,"expected_tools":["lookup_booking","search_knowledge_base"]},
+  {"ticket_id":"T-006","message":"My card was charged twice for booking BK-1004.","expected_category":"refund/payment","expected_escalation":true,"expected_tools":["lookup_booking","create_escalation"]},
+  {"ticket_id":"T-007","message":"Do you allow service animals?","expected_category":"accessibility assistance","expected_escalation":false,"expected_tools":["search_knowledge_base"]},
+  {"ticket_id":"T-008","message":"What time should I arrive for an airport shuttle?","expected_category":"general information","expected_escalation":false,"expected_tools":["search_knowledge_base"]},
+  {"ticket_id":"T-009","message":"Booking BK-9999 does not appear in my account and I travel today.","expected_category":"booking issue","expected_escalation":true,"expected_tools":["lookup_booking","create_escalation"]},
+  {"ticket_id":"T-010","message":"Can I cancel booking BK-1001 without a fee?","expected_category":"booking issue","expected_escalation":false,"expected_tools":["lookup_booking","search_knowledge_base"]},
+  {"ticket_id":"T-011","message":"The payment on BK-1004 failed. How can I try again?","expected_category":"refund/payment","expected_escalation":false,"expected_tools":["lookup_booking","search_knowledge_base"]},
+  {"ticket_id":"T-012","message":"Our coach is delayed 20 minutes. Booking BK-1003.","expected_category":"service disruption","expected_escalation":false,"expected_tools":["lookup_booking"]},
+  {"ticket_id":"T-013","message":"My mobility assistance was not provided and departure is in two hours. Booking BK-1001.","expected_category":"accessibility assistance","expected_escalation":true,"expected_tools":["lookup_booking","create_escalation"]},
+  {"ticket_id":"T-014","message":"Can you tell me what services you offer?","expected_category":"general information","expected_escalation":false,"expected_tools":["search_knowledge_base"]},
+  {"ticket_id":"T-015","message":"I entered the wrong passenger name on BK-1001 and leave tomorrow.","expected_category":"booking issue","expected_escalation":true,"expected_tools":["lookup_booking","search_knowledge_base","create_escalation"]}
+]
+

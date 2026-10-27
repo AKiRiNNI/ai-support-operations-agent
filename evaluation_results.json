@@ -1,0 +1,175 @@
+
+{
+  "summary": {
+    "cases": 15,
+    "category_accuracy": 1.0,
+    "escalation_accuracy": 1.0,
+    "average_expected_tool_recall": 0.9333333333333333,
+    "cases_with_no_unexpected_tools": 0.9333333333333333
+  },
+  "details": [
+    {
+      "ticket_id": "T-001",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking"
+      ]
+    },
+    {
+      "ticket_id": "T-002",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [
+        "search_knowledge_base"
+      ],
+      "tools_used": [
+        "lookup_booking",
+        "search_knowledge_base",
+        "create_escalation"
+      ]
+    },
+    {
+      "ticket_id": "T-003",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "search_knowledge_base"
+      ]
+    },
+    {
+      "ticket_id": "T-004",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking",
+        "search_knowledge_base",
+        "create_escalation"
+      ]
+    },
+    {
+      "ticket_id": "T-005",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 0.5,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking"
+      ]
+    },
+    {
+      "ticket_id": "T-006",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking",
+        "create_escalation"
+      ]
+    },
+    {
+      "ticket_id": "T-007",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "search_knowledge_base"
+      ]
+    },
+    {
+      "ticket_id": "T-008",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "search_knowledge_base"
+      ]
+    },
+    {
+      "ticket_id": "T-009",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking",
+        "create_escalation"
+      ]
+    },
+    {
+      "ticket_id": "T-010",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking",
+        "search_knowledge_base"
+      ]
+    },
+    {
+      "ticket_id": "T-011",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 0.5,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking"
+      ]
+    },
+    {
+      "ticket_id": "T-012",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking"
+      ]
+    },
+    {
+      "ticket_id": "T-013",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking",
+        "create_escalation"
+      ]
+    },
+    {
+      "ticket_id": "T-014",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "search_knowledge_base"
+      ]
+    },
+    {
+      "ticket_id": "T-015",
+      "category_correct": true,
+      "escalation_correct": true,
+      "tool_recall": 1.0,
+      "unexpected_tools": [],
+      "tools_used": [
+        "lookup_booking",
+        "search_knowledge_base",
+        "create_escalation"
+      ]
+    }
+  ]
+}
+

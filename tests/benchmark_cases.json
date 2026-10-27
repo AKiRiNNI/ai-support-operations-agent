@@ -1,0 +1,565 @@
+[
+  {
+    "ticket_id": "B-001",
+    "message": "Please confirm the wheelchair-accessible vehicle on BK-1001.",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-002",
+    "message": "Do you allow trained service animals?",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-003",
+    "message": "I need mobility assistance for BK-1001 next month.",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking",
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-004",
+    "message": "My wheelchair assistance is missing and BK-1001 leaves in two hours.",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-005",
+    "message": "Is accessibility assistance free?",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-006",
+    "message": "The accessible vehicle for BK-1001 has not arrived and I am waiting now.",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-007",
+    "message": "Can I bring a folding mobility scooter?",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-008",
+    "message": "I requested accessibility help for BK-9999 but travel is today.",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-009",
+    "message": "Does BK-1001 show my wheelchair request?",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-010",
+    "message": "I need assistance boarding but my trip is three weeks away.",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-011",
+    "message": "A driver refused my service animal and I am stranded on BK-1003.",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-012",
+    "message": "How early should I request an accessible vehicle?",
+    "expected_category": "accessibility assistance",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-013",
+    "message": "Can I move BK-1001 to another date next month?",
+    "expected_category": "booking issue",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking",
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-014",
+    "message": "I typed the wrong passenger name on BK-1001 and leave tomorrow.",
+    "expected_category": "booking issue",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "search_knowledge_base",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-015",
+    "message": "What is the policy for changing a booking?",
+    "expected_category": "booking issue",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-016",
+    "message": "Why does BK-9999 not exist? I travel in three weeks.",
+    "expected_category": "booking issue",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-017",
+    "message": "Please tell me whether BK-1001 is confirmed.",
+    "expected_category": "booking issue",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-018",
+    "message": "BK-1002 was cancelled. Can you confirm its status?",
+    "expected_category": "booking issue",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-019",
+    "message": "I need a same-day change for BK-1001.",
+    "expected_category": "booking issue",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "search_knowledge_base",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-020",
+    "message": "Can I cancel a booking more than 24 hours ahead?",
+    "expected_category": "booking issue",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-021",
+    "message": "My booking ID BK-9998 is missing and departure is in one hour.",
+    "expected_category": "booking issue",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-022",
+    "message": "I want to check the travel date on BK-1003.",
+    "expected_category": "booking issue",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-023",
+    "message": "Can another person use my booking?",
+    "expected_category": "booking issue",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-024",
+    "message": "BK-1001 has the wrong date and the shuttle arrives today.",
+    "expected_category": "booking issue",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-025",
+    "message": "When should an approved card refund arrive?",
+    "expected_category": "refund/payment",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-026",
+    "message": "The refund for BK-1002 was approved 14 business days ago.",
+    "expected_category": "refund/payment",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "search_knowledge_base",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-027",
+    "message": "My card was charged twice for BK-1004.",
+    "expected_category": "refund/payment",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-028",
+    "message": "Why did payment fail on BK-1004?",
+    "expected_category": "refund/payment",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-029",
+    "message": "How do card refunds work?",
+    "expected_category": "refund/payment",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-030",
+    "message": "There is a charge I do not recognize for BK-1001.",
+    "expected_category": "refund/payment",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-031",
+    "message": "Has the refund for BK-1002 been marked pending?",
+    "expected_category": "refund/payment",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-032",
+    "message": "I was charged the wrong amount and travel is next month.",
+    "expected_category": "refund/payment",
+    "expected_escalation": true,
+    "expected_tools": [
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-033",
+    "message": "Can I pay the driver in cash?",
+    "expected_category": "refund/payment",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-034",
+    "message": "BK-9999 charged my card but cannot be found.",
+    "expected_category": "refund/payment",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-035",
+    "message": "My refund was approved yesterday. When will it arrive?",
+    "expected_category": "refund/payment",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-036",
+    "message": "Payment on BK-1004 failed and departure is today.",
+    "expected_category": "refund/payment",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-037",
+    "message": "How much luggage can I bring?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-038",
+    "message": "Are oversized suitcases allowed?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-039",
+    "message": "What services do you offer?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-040",
+    "message": "Can I bring one suitcase and a backpack?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-041",
+    "message": "Where can I read your baggage rules?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-042",
+    "message": "Do I need to arrange oversized items ahead of time?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-043",
+    "message": "Tell me about airport shuttle baggage limits.",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-044",
+    "message": "What support information is available?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-045",
+    "message": "Can you explain your general luggage policy?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-046",
+    "message": "Is a small personal item included?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-047",
+    "message": "How many bags may each passenger carry?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-048",
+    "message": "I have an oversized sports bag. What should I do?",
+    "expected_category": "general information",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-049",
+    "message": "BK-1003 is disrupted and I am stranded right now.",
+    "expected_category": "service disruption",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-050",
+    "message": "What is your policy for service disruptions?",
+    "expected_category": "service disruption",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-051",
+    "message": "Please check the current status of BK-1003.",
+    "expected_category": "service disruption",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-052",
+    "message": "My coach is 20 minutes late on BK-1003.",
+    "expected_category": "service disruption",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-053",
+    "message": "A cancellation will make me miss a critical connection on BK-1003.",
+    "expected_category": "service disruption",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-054",
+    "message": "What should passengers do after a cancellation?",
+    "expected_category": "service disruption",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-055",
+    "message": "BK-1001 is confirmed but the vehicle is not here and I am stranded.",
+    "expected_category": "service disruption",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-056",
+    "message": "Is BK-1001 still confirmed for next month?",
+    "expected_category": "service disruption",
+    "expected_escalation": false,
+    "expected_tools": [
+      "lookup_booking"
+    ]
+  },
+  {
+    "ticket_id": "B-057",
+    "message": "My service was cancelled but the trip is three weeks away.",
+    "expected_category": "service disruption",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-058",
+    "message": "BK-9999 was cancelled and departure is today.",
+    "expected_category": "service disruption",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  },
+  {
+    "ticket_id": "B-059",
+    "message": "There is a minor delay and I have no connection to catch.",
+    "expected_category": "service disruption",
+    "expected_escalation": false,
+    "expected_tools": [
+      "search_knowledge_base"
+    ]
+  },
+  {
+    "ticket_id": "B-060",
+    "message": "The coach broke down and passengers are stranded on BK-1003.",
+    "expected_category": "service disruption",
+    "expected_escalation": true,
+    "expected_tools": [
+      "lookup_booking",
+      "create_escalation"
+    ]
+  }
+]
