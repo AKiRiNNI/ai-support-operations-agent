@@ -21,14 +21,16 @@ The project demonstrates four distinct ideas:
 - 100% category accuracy on that small v1 set
 - 100% escalation accuracy on that small v1 set
 - 93.3% expected-tool recall on that small v1 set
-- 60-case balanced benchmark ready for a stronger follow-up evaluation
+- 60-case balanced baseline: 90.0% category accuracy, 93.3% escalation accuracy, 75.0% exact tool selection, 0% runtime failures
+- Baseline analysis identified six category errors, four escalation errors, and fifteen tool-selection mismatches
+- A v2 decision-boundary prompt is ready for a controlled before/after rerun on the same 60 cases
 
 Do not present the 15-case results as production performance. The set is synthetic and small.
 
 ## Honest resume bullets now
 
 - **AI Workflow Automation:** Built a Python support-operations agent using OpenAI native function calling to classify ticket category and urgency, dynamically route requests across knowledge retrieval, booking lookup, and escalation tools, and generate structured customer responses.
-- **Testing & Validation:** Evaluated 15 labeled synthetic support cases with 100% category and escalation accuracy and 93.3% expected-tool recall; expanded validation into a balanced 60-case benchmark covering five ticket categories, invalid IDs, urgent escalations, and tool-selection failures.
+- **Testing & Validation:** Evaluated 60 labeled synthetic support cases across five operational categories, achieving 90% category accuracy, 93% escalation accuracy, and 0% runtime failures; analyzed six classification errors, four escalation errors, and fifteen tool-routing mismatches to refine decision boundaries.
 
 ## Resume bullet after running the 60-case benchmark
 

@@ -124,12 +124,20 @@ python -m unittest discover -s tests -v
 
 原始 v1 评估结果保存在 `evaluation_results.json`，包含 15 条合成工单：类别准确率 100%、升级准确率 100%、期望工具召回率 93.3%。这个集合较小，因此只作为早期验证结果。
 
-当前 benchmark 是 `tests/benchmark_cases.json`：共 60 条，五类工单各 12 条，其中 19 条预期升级。运行真实模型评估并自动保存结果：
+当前 benchmark 是 `tests/benchmark_cases.json`：共 60 条，五类工单各 12 条，其中 19 条预期升级。v1 baseline 已完整运行，结果保存在 `results/benchmark_60.json`：
+
+- 60/60 成功完成，运行失败率 0%
+- 类别准确率 90.0%
+- 升级准确率 93.3%
+- 工具完全匹配率 75.0%，工具 F1 92.9%
+- 端到端通过率 65.0%
+
+根据 baseline 暴露的分类边界、漏升级和多余知识库查询问题，prompt 已升级为 `v2-decision-boundaries`。使用完全相同的数据集运行 v2，并保留独立结果：
 
 ```bash
 python evaluate.py \
   --cases tests/benchmark_cases.json \
-  --output results/benchmark_60.json
+  --output results/benchmark_60_v2.json
 
 # 快速试跑前三条（会产生 API 费用）
 python evaluate.py \

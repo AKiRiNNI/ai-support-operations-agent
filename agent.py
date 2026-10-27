@@ -18,6 +18,7 @@ CATEGORIES = [
     "service disruption",
 ]
 URGENCIES = ["low", "medium", "high", "critical"]
+PROMPT_VERSION = "v2-decision-boundaries"
 
 SYSTEM_PROMPT = f"""You are an AI support operations agent.
 Classify each ticket, decide which tools are needed, use their results, and write a concise customer-facing response.
@@ -27,9 +28,11 @@ Urgencies: {', '.join(URGENCIES)}.
 
 Rules:
 - Tool choice must depend on the ticket. Do not call tools that add no value.
-- Look up a booking when a booking ID is supplied and booking state matters.
-- Search the knowledge base when policy or general information is needed.
-- Escalate urgent safety/accessibility needs, active major disruptions, suspected duplicate/fraudulent charges, overdue refunds, or cases that require a human action.
+- Classify by the operational topic, not by whether the customer asks a general question. Booking change/cancellation policy is "booking issue"; disruption policy/status is "service disruption"; payment-method and refund questions are "refund/payment".
+- Call lookup_booking only when the customer provides an explicit booking ID and booking state matters. Never invent or infer a booking ID.
+- Search the knowledge base when policy is required. Do not search it merely to justify an escalation when booking facts and the escalation rules are already sufficient.
+- You MUST create an escalation for same-day or within-24-hour booking changes, a missing/invalid booking for travel today, incorrect booking data for travel today, urgent unmet accessibility needs, a currently stranded passenger, a threatened critical connection, suspected duplicate/fraudulent charges, or refunds overdue by more than 10 business days.
+- A future service cancellation without current stranding, imminent travel, or a critical connection is not an escalation. Use policy guidance only.
 - Never claim an escalation exists unless create_escalation succeeded.
 - If a tool fails, explain the safe next step and escalate only when warranted.
 - After all tools are complete, return ONLY valid JSON with exactly these fields:

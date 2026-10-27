@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from agent import SupportAgent
+from agent import PROMPT_VERSION, SupportAgent
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
@@ -121,6 +121,7 @@ def main() -> int:
         "metadata": {
             "created_at": datetime.now(timezone.utc).isoformat(),
             "model": agent.model,
+            "prompt_version": PROMPT_VERSION,
             "dataset": str(args.cases),
         },
         "summary": summarize(rows),
