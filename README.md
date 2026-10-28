@@ -199,6 +199,16 @@ python evaluate_external.py \
 
 不要覆盖 `results/external_holdout_v1.json`。v3 的最终泛化结论仍需第二组未使用的外部数据验证。
 
+v3 在相同60条上的 controlled development rerun 已完成：category accuracy 从61.7%提升到90.0%，ABCD 从87.5%提升到97.5%，MultiWOZ 从10.0%提升到75.0%。17个原错误案例得到修正；剩余问题包括4个已知 ontology mismatch、1个退款分类错误和1个无效最终 JSON。Agent 现在会对无效最终 JSON 自动发起一次格式纠正重试。
+
+可以只验证曾经失败的 train-booking case，而不再支付完整60条的调用费用：
+
+```bash
+python evaluate_external.py \
+  --ticket-id EXT-MWOZ-MUL0432 \
+  --output results/final_json_retry_smoke.json
+```
+
 ## 限制
 
 - JSON 文件写入没有数据库锁，不适合并发生产流量。

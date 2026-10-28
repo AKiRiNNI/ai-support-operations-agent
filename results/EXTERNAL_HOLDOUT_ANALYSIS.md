@@ -66,3 +66,22 @@ Because these results have now been inspected, this v1 external set is no longer
 2. Explicitly assign return policy, refund initiation, and card rejection to `refund/payment`.
 3. Measure the same 60 cases again only as a controlled before/after development comparison.
 4. Evaluate the revised prompt on a new external holdout drawn from different ABCD records and the untouched second MultiWOZ test file.
+
+## v3 controlled development rerun
+
+Prompt `v3-external-boundaries` was evaluated on the same 60 cases after the v1 errors were inspected. This is a before/after development comparison, not an independent generalization result.
+
+| Metric | v2 external baseline | v3 same-set rerun | Change |
+|---|---:|---:|---:|
+| Category accuracy | 61.7% (37/60) | 90.0% (54/60) | +28.3 pp |
+| ABCD accuracy | 87.5% | 97.5% | +10.0 pp |
+| MultiWOZ accuracy | 10.0% | 75.0% | +65.0 pp |
+| Runtime failure rate | 0.0% | 1.7% (1/60) | +1 failure |
+
+Seventeen previously incorrect cases became correct, and no previously correct case became a classification error. The six non-passing cases were:
+
+- four expected ontology mismatches where hotel, restaurant, or attraction reservations remain labeled `booking issue` by the dataset mapping but are intentionally treated as unsupported-domain `general information` by v3;
+- one explicit refund request still classified as `general information`;
+- one train-booking case that returned invalid final JSON instead of a parseable result.
+
+The invalid-JSON failure motivated a single automatic format-repair retry in the agent loop. The retry is an operational reliability change and must be verified separately; it does not retroactively change the saved 90.0% report.

@@ -35,3 +35,5 @@ The public-data external baseline is stored in `external_holdout_v1.json`. It co
 The low MultiWOZ score exposed an ontology boundary: the v2 prompt covers existing booking problems but not requests to create a new reservation. See [`EXTERNAL_HOLDOUT_ANALYSIS.md`](EXTERNAL_HOLDOUT_ANALYSIS.md) and [`EXTERNAL_DATA_METHODOLOGY.md`](../EXTERNAL_DATA_METHODOLOGY.md).
 
 Prompt `v3-external-boundaries` now assigns new transportation reservations to `booking issue`, unsupported-domain reservations to `general information`, and return/refund policy, refund initiation, rejected cards, and payment failures to `refund/payment`. Save the controlled same-set rerun as `external_development_v3.json`; never overwrite the v1 baseline.
+
+The v3 same-set rerun is stored in `external_development_v3.json`. Category accuracy improved from 61.7% to 90.0% (+28.3 percentage points): ABCD improved from 87.5% to 97.5%, and MultiWOZ improved from 10.0% to 75.0%. One case failed because the model returned invalid final JSON; the agent now retries one malformed final result. See `EXTERNAL_HOLDOUT_ANALYSIS.md` for the six remaining non-passing cases and validity caveats.

@@ -29,6 +29,7 @@ The project demonstrates four distinct ideas:
 - Added a reproducible 60-case external category benchmark from official ABCD and MultiWOZ test splits; the first run completed 60/60 cases with 0% runtime failures and established a 61.7% cross-domain baseline
 - External error analysis separated 18 new-reservation ontology mismatches and five refund/payment boundary errors from runtime failures, defining the next controlled prompt iteration
 - Prompt v3 encodes the external failure boundaries while keeping unsupported hotel, restaurant, and attraction reservations outside the transportation booking category
+- On the same 60-case development benchmark, v3 improved category accuracy from 61.7% to 90.0% (+28.3 pp), corrected 17 prior errors, and exposed one invalid-JSON runtime failure that led to an automatic format-repair retry
 
 Do not present the 60-case results as production performance. The set is synthetic and functions as a development benchmark after prompt refinement.
 
@@ -39,6 +40,7 @@ Do not present the 60-case results as production performance. The set is synthet
 - **Iterative Improvement:** Refined decision boundaries from benchmark failure analysis, improving category accuracy from 90% to 93%, escalation accuracy from 93% to 98%, exact tool selection from 75% to 82%, and end-to-end pass rate from 65% to 75% on the development benchmark.
 - **Evaluation Design:** Built a provenance-tracked external holdout from 60 public ABCD and MultiWOZ examples, preserving source IDs, licenses, and deterministic transformations to test classification beyond prompt-development cases.
 - **Failure Analysis:** Established a 61.7% cross-domain category baseline with 0% runtime failures on 60 public-data cases, tracing 23 errors to new-reservation and refund/payment decision boundaries rather than API or tool-execution failures.
+- **Iterative Improvement:** Refined decision boundaries from external failure analysis, improving category accuracy from 61.7% to 90.0% on a 60-case development benchmark and adding an automatic retry for malformed structured outputs.
 
 ## Resume bullet after running the 60-case benchmark
 

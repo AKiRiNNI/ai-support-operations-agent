@@ -73,10 +73,21 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cases", type=Path, default=DEFAULT_CASES)
     parser.add_argument("--limit", type=int)
+    parser.add_argument(
+        "--ticket-id",
+        action="append",
+        help="Run only a specific ticket ID; repeat the option for multiple tickets",
+    )
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
     cases = json.loads(args.cases.read_text(encoding="utf-8"))
+    if args.ticket_id:
+        selected_ids = set(args.ticket_id)
+        cases = [case for case in cases if case["ticket_id"] in selected_ids]
+        missing_ids = selected_ids - {case["ticket_id"] for case in cases}
+        if missing_ids:
+            raise SystemExit(f"Unknown ticket IDs: {sorted(missing_ids)}")
     if args.limit is not None:
         cases = cases[: args.limit]
     if not cases:

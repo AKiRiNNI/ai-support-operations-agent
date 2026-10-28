@@ -40,6 +40,28 @@ class FakeClient:
         self.responses = FakeResponses()
 
 
+class InvalidThenValidResponses:
+    def __init__(self):
+        self.calls = 0
+
+    def create(self, **kwargs):
+        self.calls += 1
+        if self.calls == 1:
+            return SimpleNamespace(output=[], output_text="")
+        final = {
+            "category": "booking issue",
+            "urgency": "low",
+            "escalation_required": False,
+            "final_response": "I can help with that transportation booking request.",
+        }
+        return SimpleNamespace(output=[], output_text=json.dumps(final))
+
+
+class InvalidThenValidClient:
+    def __init__(self):
+        self.responses = InvalidThenValidResponses()
+
+
 class AgentLoopTests(unittest.TestCase):
     def test_prompt_documents_observed_decision_boundaries(self):
         self.assertIn("Classify by the operational topic", SYSTEM_PROMPT)
@@ -59,6 +81,14 @@ class AgentLoopTests(unittest.TestCase):
         self.assertEqual(result.escalation_status, "not_needed")
         print("\nEnd-to-end demo result:")
         print(json.dumps(result.to_dict(), indent=2))
+
+    def test_retries_one_invalid_final_json_response(self):
+        client = InvalidThenValidClient()
+        result = SupportAgent(client=client, model="test-model").handle_ticket(
+            "T-RETRY", "I would like to book a train."
+        )
+        self.assertEqual(client.responses.calls, 2)
+        self.assertEqual(result.category, "booking issue")
 
 
 if __name__ == "__main__":

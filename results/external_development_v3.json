@@ -1,0 +1,762 @@
+{
+  "metadata": {
+    "created_at": "2026-10-27T21:22:32.743981+00:00",
+    "model": "gpt-5.4-mini",
+    "prompt_version": "v3-external-boundaries",
+    "dataset": "/Users/akirin/Documents/Codex/2026-09-22/i-want-to-build-a-portfolio/outputs/ai-support-operations-agent/tests/external_holdout_cases.json",
+    "scored_dimensions": [
+      "category"
+    ],
+    "note": "Tools and escalations are recorded for audit but not scored."
+  },
+  "summary": {
+    "cases": 60,
+    "completed_cases": 59,
+    "runtime_failure_rate": 0.01666666666666672,
+    "category_accuracy": 0.9,
+    "by_category": {
+      "booking issue": {
+        "cases": 20,
+        "category_accuracy": 0.75
+      },
+      "general information": {
+        "cases": 20,
+        "category_accuracy": 1.0
+      },
+      "refund/payment": {
+        "cases": 20,
+        "category_accuracy": 0.95
+      }
+    },
+    "by_source": {
+      "ABCD v1.1": {
+        "cases": 40,
+        "category_accuracy": 0.975
+      },
+      "MultiWOZ 2.2": {
+        "cases": 20,
+        "category_accuracy": 0.75
+      }
+    },
+    "unscored_decision_audit": {
+      "tool_call_counts": {
+        "create_escalation": 4,
+        "search_knowledge_base": 25
+      },
+      "escalations_created": 4
+    }
+  },
+  "details": [
+    {
+      "ticket_id": "EXT-ABCD-10014",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "10014",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1045",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1045",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1075",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1075",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1087",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1087",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1208",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1208",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1529",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1529",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1564",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1564",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "high",
+      "observed_tools": [
+        "create_escalation"
+      ],
+      "observed_escalation_status": "created"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1669",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1669",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "high",
+      "observed_tools": [
+        "create_escalation"
+      ],
+      "observed_escalation_status": "created"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1778",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1778",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1896",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1896",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-1903",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "1903",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2003",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2003",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2070",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2070",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2103",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2103",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-215",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "215",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2237",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2237",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2244",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2244",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2280",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2280",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2509",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2509",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2556",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2556",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-2772",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "2772",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-3013",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "3013",
+      "expected_category": "refund/payment",
+      "actual_category": "general information",
+      "category_correct": false,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-3234",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "3234",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-3332",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "3332",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-3406",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "3406",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-3499",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "3499",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-351",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "351",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-3644",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "3644",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-3685",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "3685",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-3743",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "3743",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "high",
+      "observed_tools": [
+        "search_knowledge_base",
+        "create_escalation"
+      ],
+      "observed_escalation_status": "created"
+    },
+    {
+      "ticket_id": "EXT-ABCD-4061",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "4061",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "high",
+      "observed_tools": [
+        "search_knowledge_base",
+        "create_escalation"
+      ],
+      "observed_escalation_status": "created"
+    },
+    {
+      "ticket_id": "EXT-ABCD-4160",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "4160",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-431",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "431",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-4613",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "4613",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-465",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "465",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-5180",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "5180",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-5252",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "5252",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-5410",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "5410",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-671",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "671",
+      "expected_category": "general information",
+      "actual_category": "general information",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-ABCD-987",
+      "source_dataset": "ABCD v1.1",
+      "source_record_id": "987",
+      "expected_category": "refund/payment",
+      "actual_category": "refund/payment",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [
+        "search_knowledge_base"
+      ],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL0225",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL0225.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL0233",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL0233.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL0432",
+      "source_dataset": "MultiWOZ 2.2",
+      "expected_category": "booking issue",
+      "error": "Model returned invalid final JSON: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL0457",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL0457.json",
+      "expected_category": "booking issue",
+      "actual_category": "general information",
+      "category_correct": false,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL0469",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL0469.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL0484",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL0484.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL0677",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL0677.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL1642",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL1642.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL2130",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL2130.json",
+      "expected_category": "booking issue",
+      "actual_category": "general information",
+      "category_correct": false,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-MUL2368",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "MUL2368.json",
+      "expected_category": "booking issue",
+      "actual_category": "general information",
+      "category_correct": false,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-PMUL1537",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "PMUL1537.json",
+      "expected_category": "booking issue",
+      "actual_category": "general information",
+      "category_correct": false,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-PMUL1623",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "PMUL1623.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-PMUL1755",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "PMUL1755.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-SNG0004",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "SNG0004.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-SNG0008",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "SNG0008.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-SNG0085",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "SNG0085.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-SNG0098",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "SNG0098.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-SNG01359",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "SNG01359.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "low",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-SNG01542",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "SNG01542.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    },
+    {
+      "ticket_id": "EXT-MWOZ-SNG01733",
+      "source_dataset": "MultiWOZ 2.2",
+      "source_record_id": "SNG01733.json",
+      "expected_category": "booking issue",
+      "actual_category": "booking issue",
+      "category_correct": true,
+      "observed_urgency": "medium",
+      "observed_tools": [],
+      "observed_escalation_status": "not_needed"
+    }
+  ]
+}

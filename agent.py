@@ -79,6 +79,7 @@ class SupportAgent:
         ]
         tools_used: list[str] = []
         escalation_created = False
+        final_format_retries = 0
 
         for _ in range(self.max_turns):
             response = self.client.responses.create(
@@ -94,9 +95,25 @@ class SupportAgent:
             tool_calls = [item for item in response.output if item.type == "function_call"]
 
             if not tool_calls:
-                return self._build_result(
-                    ticket_id, response.output_text, tools_used, escalation_created
-                )
+                try:
+                    return self._build_result(
+                        ticket_id, response.output_text, tools_used, escalation_created
+                    )
+                except RuntimeError as exc:
+                    if final_format_retries >= 1:
+                        raise
+                    final_format_retries += 1
+                    input_items.append(
+                        {
+                            "role": "user",
+                            "content": (
+                                f"Your final result could not be accepted: {exc}. "
+                                "Return only valid JSON with category, urgency, "
+                                "escalation_required, and final_response."
+                            ),
+                        }
+                    )
+                    continue
 
             for call in tool_calls:
                 try:
